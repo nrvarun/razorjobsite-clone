@@ -1,30 +1,56 @@
 import THEME from "@styles/Theme";
-import { FC, HTMLProps } from "react";
+import { FC, HTMLProps, PropsWithoutRef } from "react";
 import styled, { css } from "styled-components";
 
 interface TypographyProps extends HTMLProps<HTMLHeadingElement> {
-  children: React.ReactNode;
+  text?: string;
   color?: string;
+  children?: JSX.Element | JSX.Element[];
 }
 
-export const Heading1: FC<TypographyProps> = ({ children }) => {
-  return <StyledH1>{children}</StyledH1>;
+export const Heading1: FC<TypographyProps> = ({ children, text, ...props }) => {
+  return (
+    <StyledH1>
+      {text}
+      {children}
+    </StyledH1>
+  );
 };
 
-export const Heading2: FC<TypographyProps> = ({ children }) => {
-  return <StyledHeading2>{children}</StyledHeading2>;
+export const Heading2: FC<TypographyProps> = ({ children, text }) => {
+  return (
+    <StyledHeading2>
+      {text}
+      {children}
+    </StyledHeading2>
+  );
 };
 
-export const Heading3: FC<TypographyProps> = ({ children }) => {
-  return <StyledHeading3>{children}</StyledHeading3>;
+export const Heading3: FC<TypographyProps> = ({ children, text }) => {
+  return (
+    <StyledHeading3>
+      {text}
+      {children}
+    </StyledHeading3>
+  );
 };
 
-export const Heading4: FC<TypographyProps> = ({ children }) => {
-  return <StyledHeading4>{children}</StyledHeading4>;
+export const Heading4: FC<TypographyProps> = ({ children, text }) => {
+  return (
+    <StyledHeading4>
+      {text}
+      {children}
+    </StyledHeading4>
+  );
 };
 
-export const Paragraph: FC<TypographyProps> = ({ children }) => {
-  return <StyledPara>{children}</StyledPara>;
+export const Paragraph: FC<TypographyProps> = ({ children, text }) => {
+  return (
+    <StyledPara>
+      {text}
+      {children}
+    </StyledPara>
+  );
 };
 
 const StyledH1 = styled.h1`

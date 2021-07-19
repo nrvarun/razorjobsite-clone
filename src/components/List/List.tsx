@@ -26,9 +26,7 @@ const List: FC<ListProps> = (props) => {
   };
 
   if (type === "ol") {
-    return (
-      <StyledOList>{items.length > 0 && renderListItems(items)}</StyledOList>
-    );
+    return <StyledOList>{renderListItems(items)}</StyledOList>;
   }
 
   return <StyledUList>{renderListItems(items)}</StyledUList>;

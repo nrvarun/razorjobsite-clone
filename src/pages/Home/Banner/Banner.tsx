@@ -13,10 +13,10 @@ const Banner = () => {
             alt="razorpay logo"
           />
         </Heading1>
-        <Heading2>
-          Looking for amazing work, culture and an equally amazing interview
-          experience? Let's make it happen! 🤝
-        </Heading2>
+        <Heading2
+          text="Looking for amazing work, culture and an equally amazing interview
+          experience? Let's make it happen! 🤝"
+        />
       </Container>
     </StyledBanner>
   );

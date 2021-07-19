@@ -1,12 +1,19 @@
-import { Children, FC, Props, PropsWithoutRef } from "react";
+import {
+  Children,
+  ComponentPropsWithoutRef,
+  FC,
+  Props,
+  PropsWithoutRef,
+} from "react";
 import { StyledContainer } from "./Container.style";
 
 interface IProps {
-  children: React.ReactChild | React.ReactChild[];
+  children: JSX.Element | JSX.Element[];
+  props: ComponentPropsWithoutRef<"div">;
 }
 
-const Container: FC<IProps> = ({ children }) => {
-  return <StyledContainer>{children}</StyledContainer>;
+const Container: FC<IProps> = ({ children, ...props }) => {
+  return <StyledContainer {...props}>{children}</StyledContainer>;
 };
 
 export default Container;

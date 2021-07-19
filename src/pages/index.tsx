@@ -4,6 +4,8 @@ import Basic from "@layouts/Basic";
 import Head from "next/head";
 import About from "./Home/About";
 import Banner from "./Home/Banner";
+import Experience from "./Home/Experience";
+import GetInTouch from "./Home/GetInTouch";
 
 export default function Home() {
   return (
@@ -18,6 +20,8 @@ export default function Home() {
         <main>
           <Banner />
           <About />
+          <Experience />
+          <GetInTouch />
         </main>
       </Basic>
     </div>

@@ -1,12 +1,19 @@
-import { FC } from "react";
+import { ComponentPropsWithoutRef, FC, Props } from "react";
 import StyledButton from "./Button.style";
 
 interface buttonIProps {
-  children: React.ReactNode;
+  text: string;
+  children?: JSX.Element | JSX.Element[];
+  props?: ComponentPropsWithoutRef<"button">;
 }
 
-const Button: FC<buttonIProps> = ({ children }) => {
-  return <StyledButton>{children}</StyledButton>;
+const Button: FC<buttonIProps> = ({ children, text, ...props }) => {
+  return (
+    <StyledButton {...props}>
+      {text}
+      {children}
+    </StyledButton>
+  );
 };
 
 export default Button;
